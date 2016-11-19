@@ -1,0 +1,22 @@
+<List__Manager id="1">
+  <animeList id="2">
+    <Anime id="3">
+      <name>Conan</name>
+      <id>420</id>
+      <score>7.8</score>
+      <numEp>24</numEp>
+      <finishedAiring>true</finishedAiring>
+      <image>https://myanimelist.net/api/anime/search.xml?q=conan</image>
+      <tags id="4"/>
+    </Anime>
+    <Anime id="5">
+      <name>Conan</name>
+      <id>420</id>
+      <score>7.8</score>
+      <numEp>24</numEp>
+      <finishedAiring>true</finishedAiring>
+      <image>https://myanimelist.net/api/anime/search.xml?q=conan</image>
+      <tags id="6"/>
+    </Anime>
+  </animeList>
+</List__Manager>

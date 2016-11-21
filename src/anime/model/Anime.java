@@ -10,15 +10,18 @@ public class Anime {
 	private int numEp;
 	private boolean finishedAiring;
 	private URL image;
-	private List<String> tags = new ArrayList<String>();;
+	private String[] keyWords;
+	private String synopsis;
 	
-	public Anime(String name, int id, double score, int numEp, boolean finishedAiring, URL image){
+	public Anime(String name, int id, double score, int numEp, boolean finishedAiring, URL image, String[] keyWords, String synopsis){
 		this.name = name;
 		this.id = id;
 		this.score = score;
 		this.numEp = numEp;
 		this.finishedAiring = finishedAiring;
 		this.image = image;
+		this.keyWords = keyWords;
+		this.synopsis = synopsis;
 	}
 	
 	
@@ -26,7 +29,29 @@ public class Anime {
 		return this.name;
 	}
 	
-	public void addTags(ArrayList<String> tag){
-		this.tags = tag;
+	public int getId(){
+		return this.id;
+	}
+	
+	public String[] getKeyWords(){
+		return this.keyWords;
+	}
+	
+	public double getRating(){
+		return this.score;
+	}
+	
+	public URL getImage(){
+		return this.image;
+	}
+	
+	public String getSynopsis(){
+		return this.synopsis;
+	}
+	
+	public void setSynopsis(String s){
+		this.synopsis = s;
 	}
 }
+
+

@@ -6,11 +6,14 @@ public class AnimeListManager{
 
   private static AnimeListManager theInstance = null;
   private List<Anime> animeList;
+  private List<Anime> suggestionList;
 
   //constructor
   private AnimeListManager(){
 
     animeList = new ArrayList<Anime>();
+    suggestionList = new ArrayList<Anime>();
+    
   }
 
   //get Instace
@@ -34,6 +37,13 @@ public class AnimeListManager{
     List<Anime> myList = Collections.unmodifiableList(animeList);
     return myList;
   }
+  
+  public List<Anime> getSuggestionList(){
+	    List<Anime> myList = Collections.unmodifiableList(suggestionList);
+	    return myList;
+	  }
+  
+  
 
   //Get the size of the list
   public int animeListSize(){
@@ -53,6 +63,14 @@ public class AnimeListManager{
     return index;
   }
 
+  public int indexOfName(String a){
+	  for(int i =0;i< animeList.size();i++){
+		  if(a==animeList.get(i).getName()){
+			  return i;
+		  }
+	  }
+	  return -1;
+  }
 
   public boolean addAnime(Anime a1){
     boolean added = false;
@@ -61,6 +79,14 @@ public class AnimeListManager{
     added = true;
     return added;
   }
+  
+  public boolean addSuggestion(Anime a1){
+	    boolean added = false;
+	    if (suggestionList.contains(a1)) { return false; }
+	    suggestionList.add(a1);
+	    added = true;
+	    return added;
+	  }
 
   public boolean removeAnime(Anime a1){
     boolean removed = false;
@@ -83,6 +109,7 @@ public class AnimeListManager{
     return added;
   }
 
+  
 //  public boolean addOrMoveAnimeAt(Anime a2, int index)
 //  {
 //    boolean added = false;
